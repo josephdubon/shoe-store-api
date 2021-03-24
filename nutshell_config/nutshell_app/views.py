@@ -33,7 +33,7 @@ class NSManufacturerViewSet(viewsets.ModelViewSet):
 
 class NSShoeTypeViewSet(viewsets.ModelViewSet):
     """
-    API end point that allows Manufacturer to be viewed or edited
+    API end point that allows ShoeType to be viewed or edited
     """
     queryset = Group.objects.all()
     serializer_class = serializers.NSShoeTypeSerializer
@@ -41,7 +41,7 @@ class NSShoeTypeViewSet(viewsets.ModelViewSet):
 
 class NSShoeColorViewSet(viewsets.ModelViewSet):
     """
-    API end point that allows Manufacturer to be viewed or edited
+    API end point that allows ShoeColor to be viewed or edited
     """
     queryset = Group.objects.all()
     serializer_class = serializers.NSShoeColorSerializer
@@ -49,7 +49,7 @@ class NSShoeColorViewSet(viewsets.ModelViewSet):
 
 class NSShoeViewSet(viewsets.ModelViewSet):
     """
-    API end point that allows Manufacturer to be viewed or edited
+    API end point that allows Shoe to be viewed or edited
     """
     queryset = Group.objects.all()
     serializer_class = serializers.NSShoeSerializer
