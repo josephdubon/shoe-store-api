@@ -41,7 +41,6 @@ class NSManufacturer(models.Model):
     name: str
     website: url
     """
-
     name = models.CharField(max_length=50, blank=True, default='')
     website = models.URLField()
 
@@ -51,7 +50,6 @@ class NSShoeType(models.Model):
     """
     style: str
     """
-
     style = models.CharField(max_length=50, blank=True, default='')
 
 
@@ -61,7 +59,6 @@ class NSShoeColor(models.Model):
     # color_name: str (ROYGBIV + white / black) -->
     # hint: https://docs.djangoproject.com/en/3.0/ref/models/fields/#choices
     """
-
     ROYGBIV = 'RYG'
     WHITE = 'WH'
     BLACK = 'BLK'
@@ -88,8 +85,7 @@ class NSShoe(models.Model):
     shoe_type: FK
     fasten_type: str
     """
-
-    size = models.IntegerField(max_length=3, blank=True, default='')
+    size = models.IntegerField(blank=True, default='')
     brand_name = models.CharField(max_length=50, blank=True, default='')
     manufacturer = models.ForeignKey('NSManufacturer', on_delete=models.CASCADE)
     color = models.ForeignKey('NSShoeColor', on_delete=models.CASCADE)
