@@ -27,7 +27,7 @@ class NSManufacturerViewSet(viewsets.ModelViewSet):
     """
     API end point that allows Manufacturer to be viewed or edited
     """
-    queryset = NSManufacturer.objects.all()
+    queryset = NSManufacturer.objects.all().order_by('-name')
     serializer_class = serializers.NSManufacturerSerializer
 
 
@@ -35,7 +35,7 @@ class NSShoeTypeViewSet(viewsets.ModelViewSet):
     """
     API end point that allows ShoeType to be viewed or edited
     """
-    queryset = NSShoeType.objects.all()
+    queryset = NSShoeType.objects.all().order_by('-style')
     serializer_class = serializers.NSShoeTypeSerializer
 
 
@@ -43,7 +43,7 @@ class NSShoeColorViewSet(viewsets.ModelViewSet):
     """
     API end point that allows ShoeColor to be viewed or edited
     """
-    queryset = NSShoeColor.objects.all()
+    queryset = NSShoeColor.objects.all().order_by('-color_name')
     serializer_class = serializers.NSShoeColorSerializer
 
 
@@ -51,5 +51,5 @@ class NSShoeViewSet(viewsets.ModelViewSet):
     """
     API end point that allows Shoe to be viewed or edited
     """
-    queryset = NSShoe.objects.all()
+    queryset = NSShoe.objects.all().order_by('-manufacturer')
     serializer_class = serializers.NSShoeSerializer
