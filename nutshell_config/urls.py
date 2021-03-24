@@ -20,6 +20,10 @@ from nutshell_config.nutshell_app import views
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
+router.register(r'manufacturers', views.NSManufacturerViewSet)
+router.register(r'shoe-types', views.NSShoeTypeViewSet)
+router.register(r'shoe-colors', views.NSShoeColorViewSet)
+router.register(r'shoes', views.NSShoeViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
