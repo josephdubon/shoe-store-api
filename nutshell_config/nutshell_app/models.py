@@ -44,6 +44,9 @@ class NSManufacturer(models.Model):
     name = models.CharField(max_length=50, blank=True, default='')
     website = models.URLField()
 
+    def __str__(self):
+        return self.name
+
 
 # ShoeType
 class NSShoeType(models.Model):
@@ -51,6 +54,9 @@ class NSShoeType(models.Model):
     style: str
     """
     style = models.CharField(max_length=50, blank=True, default='')
+
+    def __str__(self):
+        return self.style
 
 
 # ShoeColor
@@ -73,6 +79,9 @@ class NSShoeColor(models.Model):
         default=WHITE,
     )
 
+    def __str__(self):
+        return self.color_name
+
 
 # Shoe
 class NSShoe(models.Model):
@@ -92,3 +101,6 @@ class NSShoe(models.Model):
     material = models.CharField(max_length=25, blank=True, default='')
     shoe_type = models.ForeignKey(NSShoeType, on_delete=models.CASCADE)
     fasten_type = models.CharField(max_length=25, blank=True, default='')
+
+    def __str__(self):
+        return f'{self.size}{self.brand_name}{self.material}{self.fasten_type}'
