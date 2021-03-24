@@ -87,8 +87,8 @@ class NSShoe(models.Model):
     """
     size = models.IntegerField(blank=True, default='')
     brand_name = models.CharField(max_length=50, blank=True, default='')
-    manufacturer = models.ForeignKey('NSManufacturer', on_delete=models.CASCADE)
-    color = models.ForeignKey('NSShoeColor', on_delete=models.CASCADE)
+    manufacturer = models.ForeignKey(NSManufacturer, on_delete=models.CASCADE, default='')
+    color = models.ForeignKey(NSShoeColor, on_delete=models.CASCADE)
     material = models.CharField(max_length=25, blank=True, default='')
-    shoe_type = models.ForeignKey('NSShoeType', on_delete=models.CASCADE)
+    shoe_type = models.ForeignKey(NSShoeType, on_delete=models.CASCADE)
     fasten_type = models.CharField(max_length=25, blank=True, default='')
