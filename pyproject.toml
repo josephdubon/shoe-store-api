@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "drf-apis-in-a-nutshell-josephdubon"
+name = "shoe-store-api"
 version = "0.1.0"
 description = ""
 authors = ["Joseph Dubon <josephdubon@pm.me>"]
